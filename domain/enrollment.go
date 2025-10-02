@@ -9,8 +9,8 @@ import (
 
 type Enrollment struct {
 	ID        string     `json:"id" gorm:"type:char(36);not null;primary_key:unique_index"`
-	UserID    string     `json:"user_id,omitempty" gorm:"type:char(36)"`
-	CourseID  string     `json:"course_id" gorm:"type:char(36):not null"`
+	UserID    string     `json:"user_id,omitempty" gorm:"type:char(36);not null"`
+	CourseID  string     `json:"course_id" gorm:"type:char(36);not null"`
 	Status    string     `json:"status" gorm:"type:char(2)"`
 	CreatedAt *time.Time `json:"-"`
 	UpdatedAt *time.Time `json:"-"`
